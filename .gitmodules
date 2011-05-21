@@ -43,3 +43,6 @@
 [submodule "vendor/assetic"]
 	path = vendor/assetic
 	url = https://github.com/kriswallsmith/assetic.git
+[submodule "vendor/monolog"]
+	path = vendor/monolog
+	url = https://github.com/Seldaek/monolog.git
