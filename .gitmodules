@@ -31,3 +31,9 @@
 [submodule "vendor/swiftmailer"]
 	path = vendor/swiftmailer
 	url = git://github.com/swiftmailer/swiftmailer.git
+[submodule "vendor/bundles/JMS/SecurityExtraBundle"]
+	path = vendor/bundles/JMS/SecurityExtraBundle
+	url = https://github.com/schmittjoh/SecurityExtraBundle.git
+[submodule "vendor/bundles/Sensio/Bundle/FrameworkExtraBundle"]
+	path = vendor/bundles/Sensio/Bundle/FrameworkExtraBundle
+	url = https://github.com/sensio/SensioFrameworkExtraBundle.git
