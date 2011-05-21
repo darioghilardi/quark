@@ -40,3 +40,6 @@
 [submodule "vendor/bundles/Symfony/Bundle/WebConfiguratorBundle"]
 	path = vendor/bundles/Symfony/Bundle/WebConfiguratorBundle
 	url = https://github.com/symfony/WebConfiguratorBundle.git
+[submodule "vendor/assetic"]
+	path = vendor/assetic
+	url = https://github.com/kriswallsmith/assetic.git
