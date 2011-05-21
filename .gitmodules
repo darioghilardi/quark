@@ -37,3 +37,6 @@
 [submodule "vendor/bundles/Sensio/Bundle/FrameworkExtraBundle"]
 	path = vendor/bundles/Sensio/Bundle/FrameworkExtraBundle
 	url = https://github.com/sensio/SensioFrameworkExtraBundle.git
+[submodule "vendor/bundles/Symfony/Bundle/WebConfiguratorBundle"]
+	path = vendor/bundles/Symfony/Bundle/WebConfiguratorBundle
+	url = https://github.com/symfony/WebConfiguratorBundle.git
