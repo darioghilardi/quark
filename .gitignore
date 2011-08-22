@@ -1,5 +1,7 @@
+.DS_Store
 nbproject
 ._*
-.DS_Store
-app/cache/*
-app/log/*
+vendor/
+old/
+app/cache/
+app/logs
