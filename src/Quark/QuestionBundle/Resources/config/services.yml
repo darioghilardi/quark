@@ -1,0 +1,7 @@
+parameters:
+#    quark_question.example.class: Quark\QuestionBundle\Example
+
+services:
+#    quark_question.example:
+#        class: %quark_question.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
