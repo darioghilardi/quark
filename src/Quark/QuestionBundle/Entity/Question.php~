@@ -3,6 +3,7 @@
 namespace Quark\QuestionBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * @ORM\Entity
@@ -51,6 +52,16 @@ class Question
      * @ORM\Column(type="integer")
      */
     protected $answer_count;
+    
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    protected $created_at;
+    
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    protected $updated_at;
 
     /**
      * @ORM\ManyToMany(targetEntity="Tag")
@@ -59,11 +70,17 @@ class Question
      *     inverseJoinColumns={@ORM\JoinColumn(name="tag_id", referencedColumnName="id")}
      * )
      */
-    protected $tags;
+    protected $tags;    
+    
+    /**
+     * @ORM\OneToMany(targetEntity="Quark\AnswerBundle\Entity\Answer", mappedBy="question")
+     */
+    protected $answers;
 
     public function __construct()
     {
         $this->tags = new ArrayCollection();
+        $this->answers = new ArrayCollection();
     }
     
     /**
@@ -214,5 +231,85 @@ class Question
     public function getTags()
     {
         return $this->tags;
+    }
+
+    /**
+     * Add answers
+     *
+     * @param Quark\QuestionBundle\Entity\Answer $answers
+     */
+    public function addAnswers(\Quark\QuestionBundle\Entity\Answer $answers)
+    {
+        $this->answers[] = $answers;
+    }
+
+    /**
+     * Get answers
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getAnswers()
+    {
+        return $this->answers;
+    }
+
+    /**
+     * Set created_at
+     *
+     * @param datetime $createdAt
+     */
+    public function setCreatedAt($createdAt)
+    {
+        $this->created_at = $createdAt;
+    }
+
+    /**
+     * Get created_at
+     *
+     * @return datetime 
+     */
+    public function getCreatedAt()
+    {
+        return $this->created_at;
+    }
+
+    /**
+     * Set updated_at
+     *
+     * @param datetime $updatedAt
+     */
+    public function setUpdatedAt($updatedAt)
+    {
+        $this->updated_at = $updatedAt;
+    }
+
+    /**
+     * Get updated_at
+     *
+     * @return datetime 
+     */
+    public function getUpdatedAt()
+    {
+        return $this->updated_at;
+    }
+
+    /**
+     * Set accepted
+     *
+     * @param Quark\AnswerBundle\Entity\Accept $accepted
+     */
+    public function setAccepted(\Quark\AnswerBundle\Entity\Accept $accepted)
+    {
+        $this->accepted = $accepted;
+    }
+
+    /**
+     * Get accepted
+     *
+     * @return Quark\AnswerBundle\Entity\Accept 
+     */
+    public function getAccepted()
+    {
+        return $this->accepted;
     }
 }

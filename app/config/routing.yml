@@ -1,3 +1,8 @@
+QuarkAnswerBundle:
+    resource: "@QuarkAnswerBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 QuarkQuestionBundle:
     resource: "@QuarkQuestionBundle/Resources/config/routing.yml"
     prefix:   /
