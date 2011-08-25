@@ -20,6 +20,8 @@ class AppKernel extends Kernel
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
             new Quark\QuestionBundle\QuarkQuestionBundle(),
             new Quark\AnswerBundle\QuarkAnswerBundle(),
+            new FOS\UserBundle\FOSUserBundle(),
+            new Quark\UserBundle\QuarkUserBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
